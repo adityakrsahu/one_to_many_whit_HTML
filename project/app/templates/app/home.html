@@ -1,0 +1,19 @@
+<div>
+    <h2>Add Department</h2>
+    <h1><b>{{msg}}</b></h1>
+    <form action="{% url 'add_dep' %}" method="post">
+        {% csrf_token %}
+        {{dep_form.as_p}}
+        <button type="submit">Add Dep</button>
+    </form>
+</div>
+
+<div>
+    <h2>Student Form</h2>
+    <h1><b>{{msg1}}</b></h1>
+    <form action="{% url 'add_stu' %}" method="post">
+        {% csrf_token %}
+        {{stu_form.as_p}}
+        <button type="submit">Add Student</button>
+    </form>
+</div>
